@@ -1,0 +1,101 @@
+/* Finance.css */
+/* The styling and layout for HTML files */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0); /* Transparent background to see the background image */
+    color: #333; /* Dark gray text color */
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+    color: #22517c; /* Dark blue text color */
+}
+
+header p {
+    font-size: 18px;
+    color: #777; /* Light gray text color */
+}
+
+/* Navigation Style */
+nav {
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Dark gray text color */
+}
+
+nav ul li a:hover {
+    background-color: #22517c; /* Dark blue on hover */
+    color: #fff; /* White text color on hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    background-color: inherit;
+    color: #333;
+    padding: 12px 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Class selectors */
+.menu-item {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #22517c; /* Dark blue text color */
+}
+
+.menu-item li {
+    display: inline;
+    margin-right: 20px;
+    background-color: #f0f0f0; /* Light gray background for boxes */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.featured-box {
+    background: linear-gradient(to right, #092907, #9b9b9b);
+}
+
+/* ID selectors */
+#my-id {
+}
