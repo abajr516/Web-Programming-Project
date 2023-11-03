@@ -12,43 +12,57 @@ body {
 
 /* Header Styles */
 header {
-    background-color: rgba(0, 0, 0, 0); /* Transparent background to see the background image */
+    background-color: rgba(0, 0, 0, 0);
     font-family: 'Helvetica', cursive;
-    color: #333; /* Dark gray text color */
+    color: #333;
     text-align: center;
     padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 header h1 {
     font-family: 'Helvetica', cursive;
-    font-size: 48px;
+    font-size: 40px;
+    margin-bottom: 20px;
     color: #22517c; /* Dark blue text color */
 }
 
-h1 
-{
-    margin: 0; /* Remove all margins */
+h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin: 10px 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
 }
 
-/* Apply CSS styles to the second h1 with the "small" element */
+/* Apply CSS styles to the small elements within the h1 tags */
 h1 small {
-    font-size: 75%; /* Adjust the font size as needed */
-    display: block; /* Ensure a line break after the small element */
-    margin-top: 0; /* Remove top margin */
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+p 
+{
+    font-family: 'Helvetica', cursive;
+    font-size: 24px;
+    color: #22517c; /* Dark blue text color */
 }
 
 header p {
     font-size: 18px;
-    color: #777; /* Light gray text color */
+    color: #22517c; /* Dark blue text color */
+}
+
+main 
+{
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+footer 
+{
+    background-color: #f0f0f0; /* Light grey background */
 }
 
 /* Navigation Style */
 nav {
     font-family: 'Georgia', cursive;
+    font-size: 1.2rem;
     background-color: rgba(0, 0, 0, 0); /* Transparent background */
     text-align: center;
     padding: 10px 0;
@@ -57,6 +71,7 @@ nav {
 nav ul {
     list-style-type: none;
     margin: 0;
+    margin-right: 155px;
     padding: 0;
 }
 
@@ -81,9 +96,16 @@ nav ul li a:hover {
             max-width: 100%; /* Make sure it doesn't exceed the webpage width */
             height: auto; /* Automatically adjust the height to fit the content */
             background-color: #22517c; /* Background color of the box */
+	    font-size: 20px;
             color: #fff; /* Text color inside the box */
             padding: 10px; /* Padding inside the box */
             text-align: center; /* Center-align the text inside the box */
+}
+.textbox p
+{
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 10px 0;
 }
 
 .dropdown {
@@ -100,6 +122,33 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
+.header-content 
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-content h1 
+{
+    font-size: 40px;
+    color: #22517c;
+    margin-right: 20px;
+}
+
+.header-content div 
+{
+    font-family: 'Helvetica', cursive;
+    font-size: 24px;
+    color: #22517c;
+}
+
+.header-text 
+{
+    /* Adjust margin as needed to control the space between the logo and 			  text */
+    margin-right: 140px;
+    text-align: center; /* Align text to the left */
+    color: #22517c; /* Dark blue text color */
+}
 /* Class selectors */
 .menu-item {
     font-family: 'Merriweather', serif;
@@ -122,5 +171,15 @@ nav ul li a:hover {
 }
 
 /* ID selectors */
+
+/* Apply CSS styles to the logo */
+#logo 
+{
+     max-width: 150px;
+     float: left; /* This will make the logo appear on the left */
+     margin-left: 50px;
+}
+
 #my-id {
 }
+
