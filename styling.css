@@ -1,4 +1,4 @@
-/* Finance.css */
+/*styling.css*/
 /* The styling and layout for HTML files */
 
 /* Global styles */
@@ -13,6 +13,7 @@ body {
 /* Header Styles */
 header {
     background-color: rgba(0, 0, 0, 0); /* Transparent background to see the background image */
+    font-family: 'Merriweather', cursive;
     color: #333; /* Dark gray text color */
     text-align: center;
     padding: 20px 0;
@@ -23,7 +24,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', cursive;
     font-size: 48px;
     color: #22517c; /* Dark blue text color */
 }
