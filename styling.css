@@ -3,7 +3,7 @@
 
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', sans-serif;
     background-color: #f0f0f0; /* Light gray background */
     color: #333;
     margin: 0;
@@ -13,7 +13,7 @@ body {
 /* Header Styles */
 header {
     background-color: rgba(0, 0, 0, 0); /* Transparent background to see the background image */
-    font-family: 'Merriweather', cursive;
+    font-family: 'Helvetica', cursive;
     color: #333; /* Dark gray text color */
     text-align: center;
     padding: 20px 0;
@@ -24,9 +24,21 @@ header {
 }
 
 header h1 {
-    font-family: 'Merriweather', cursive;
+    font-family: 'Helvetica', cursive;
     font-size: 48px;
     color: #22517c; /* Dark blue text color */
+}
+
+h1 
+{
+    margin: 0; /* Remove all margins */
+}
+
+/* Apply CSS styles to the second h1 with the "small" element */
+h1 small {
+    font-size: 75%; /* Adjust the font size as needed */
+    display: block; /* Ensure a line break after the small element */
+    margin-top: 0; /* Remove top margin */
 }
 
 header p {
@@ -36,6 +48,7 @@ header p {
 
 /* Navigation Style */
 nav {
+    font-family: 'Georgia', cursive;
     background-color: rgba(0, 0, 0, 0); /* Transparent background */
     text-align: center;
     padding: 10px 0;
@@ -60,6 +73,17 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #22517c; /* Dark blue on hover */
     color: #fff; /* White text color on hover */
+}
+
+.textbox 
+{
+            width: 100%; /* Set the width to span the webpage */
+            max-width: 100%; /* Make sure it doesn't exceed the webpage width */
+            height: auto; /* Automatically adjust the height to fit the content */
+            background-color: #22517c; /* Background color of the box */
+            color: #fff; /* Text color inside the box */
+            padding: 10px; /* Padding inside the box */
+            text-align: center; /* Center-align the text inside the box */
 }
 
 .dropdown {
