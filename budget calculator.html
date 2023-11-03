@@ -15,46 +15,74 @@
     </header>
 
     <main>
-        <h2>Select your saving goal</h2>
-        <h4>Studies have shown that visualizing your goals makes you more likely to reach them.</h4>
+        <!--<h2>Select your saving goal</h2>
+        <h4>Studies have shown that visualizing your goals makes you more likely to reach them.</h4>-->
         <!--Ideally, I would like for this to be a dropdown selection where user can add their own after typing Other-->
         <div class="goalSelection"> 
-            <label><input type="checkbox" name="goal" value="new car"> New Car</label>
-            <label><input type="checkbox" name="goal" value="mortgage"> Mortgage</label>
-            <label><input type="checkbox" name="goal" value="rent"> Rent</label>
-            <label><input type="checkbox" name="goal" value="utlity bills"> Utility Bills</label>
-            <label><input type="checkbox" name="goal" value="retirement"> Retirement</label>
-            <label><input type="checkbox" name="goal" value="student loan"> Student Loan</label>
-            <label><input type="checkbox" name="goal" value="private loan"> Private Loan </label>
+            <h3><em><label for="goalSelection">Select your saving goal: </label></em></h3>
+            <br>
+            <select name="goals" id="goals">
+            <option value="new car">New Car</option>
+            <option value="mortgage">Mortagage</option>
+            <option value="rent">Rent</option>
+            <option value="utlity bills">Utility Bills</option>
+            <option value="retirement">Retirement</option>
+            <option value="student loan">Student Loans</option>
+            <option value="private loan">Private Loans</option>
+            <option value="other">Other</option>
+        </select>
         </div>
 
         <!--Based on the selection made above, you will get input boxes 
             for each of the selections you made where you're expected to
             input an estimate of how much you need to save for that goal-->
         <br>
-        <div class = "inputs" style="background-color: lightblue">
+        <div class = "inputs">
             <h3><em>Inputs: </em></h3>
-            <h5>How much do you want to save: </h5>
-            <label><input type="text" placeholder="Enter goal amount"></label>
-            <h5>Enter the time range that you want to save the money by: </h5>
-            <label><input type="text" placeholder="Enter time range"></label>
+            <label for="goalAmount">How much do you want to save: </label>
+            <input type="number" id="goalAmount" placeholder="Enter goal amount">
             <br>
-            <h5>Enter starting value: </h5>
-            <label><input type="text" placeholder="Enter starting amount"></label>
             <br>
-            <h5>Enter amount you plan on saving: </h5>
-            <label><input type="text" placeholder="Enter monthly saving amount"></label>
+            <label for ="timeframe">Enter the time range that you want to save the money by: </label>
+            <input type="number" id = "timeframe" placeholder="Enter time range"></label>
+            <br>
+            <br>
+            <label for="startValue">Enter starting value: </label>
+            <input type="number" id = "startValue" placeholder="Enter starting amount">
+            <br>
+            <br>
+            <label for="monthlySaving">Enter amount you plan on saving: </label>
+            <input type="number" id="monthlySaving" placeholder="Enter monthly saving amount">
             <br>
             <br>
             <!--Once you click generate report, it's going to use the info you gave to create a report that tells you 
                 how much you should save monthly to reach your goal in the timeframe you want using the 50/30/20 rule. 
                 It will also give you the projected timeline given how much you input that you will save monthly. Both 
                 will create a visual graph of the timeline.You should also be able to print/email this report.-->
-            <input type="submit" value="Generate Report">
+            <!--<input type="submit" value="Generate Report">-->
+            <button onclick="firstReport()">Generate</button>
             <br>
             <br>
+
+            <p id="result"></p>
         </div>
-        
+        <script>
+            function firstReport() {
+                // Get user inputs
+                var goalAmount = parseFloat(document.getElementById("goalAmount").value);
+                var timeframe = parseFloat(document.getElementById("timeframe").value);
+                var startValue = parseFloat(document.getElementById("startValue").value);
+                var monthlySaving = parseFloat(document.getElementById("monthlySaving").value);
+    
+                
+                var savings = (goalAmount - startValue);
+                var chart_50 = savings *.5;
+                var chart_30 = savings *.3;
+                var chart_20 = savings *.2;
+                document.getElementById("result").textContent = "Expected Monthly Input: " + chart_20;
+                
+            }
+        </script>
 
         <!--Based on the inputs, create a JS function that will compute the 50/30/20 amounts-->
 
