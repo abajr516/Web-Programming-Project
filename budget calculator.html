@@ -17,7 +17,8 @@
     <main>
         <h2>Select your saving goal</h2>
         <h4>Studies have shown that visualizing your goals makes you more likely to reach them.</h4>
-        <div class="goalSelection">
+        <!--Ideally, I would like for this to be a dropdown selection where user can add their own after typing Other-->
+        <div class="goalSelection"> 
             <label><input type="checkbox" name="goal" value="new car"> New Car</label>
             <label><input type="checkbox" name="goal" value="mortgage"> Mortgage</label>
             <label><input type="checkbox" name="goal" value="rent"> Rent</label>
@@ -31,10 +32,29 @@
             for each of the selections you made where you're expected to
             input an estimate of how much you need to save for that goal-->
         <br>
-    
-        <div class="timelineInput">
-            <label><input type="text" placeholder="Enter the time range that you want to reach the goal by: "></label>
+        <div class = "inputs" style="background-color: lightblue">
+            <h3><em>Inputs: </em></h3>
+            <h5>How much do you want to save: </h5>
+            <label><input type="text" placeholder="Enter goal amount"></label>
+            <h5>Enter the time range that you want to save the money by: </h5>
+            <label><input type="text" placeholder="Enter time range"></label>
+            <br>
+            <h5>Enter starting value: </h5>
+            <label><input type="text" placeholder="Enter starting amount"></label>
+            <br>
+            <h5>Enter amount you plan on saving: </h5>
+            <label><input type="text" placeholder="Enter monthly saving amount"></label>
+            <br>
+            <br>
+            <!--Once you click generate report, it's going to use the info you gave to create a report that tells you 
+                how much you should save monthly to reach your goal in the timeframe you want using the 50/30/20 rule. 
+                It will also give you the projected timeline given how much you input that you will save monthly. Both 
+                will create a visual graph of the timeline.You should also be able to print/email this report.-->
+            <input type="submit" value="Generate Report">
+            <br>
+            <br>
         </div>
+        
 
         <!--Based on the inputs, create a JS function that will compute the 50/30/20 amounts-->
 
