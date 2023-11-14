@@ -1,0 +1,27 @@
+Saba: Nav bar (Home, About Us, Services, Help)
+    Nav bar will be available in each html page as navigation tool
+Home: will include the tips as a carousel that will constantly change every few seconds or a preview of each of the services we have.
+    Span an entire row. COMPLETED.
+    Inside a box.    COMPLETED.
+About Us: A little about the goal of the website and a little bit about the collaborators.
+    Information about us
+    Information about website.
+        Goal/Purpose of website.
+Services: 
+    Budget Calculator.
+    Financial outlook.
+        Net Income Calculator.
+Help: will include an input box that we can email to customer service where users can write their questions or complaints
+    Could include a dropdown selection box of the TYPE of question/problem and also input for the name and contact information of the user so that customer services can get back to them.
+        Dropdowns
+            Reason for contact
+                Login Issue
+                Report Bug
+                Development Suggestions.
+                Other.
+        Text
+            Email
+            Subject
+            Message
+        Button
+            Submit
