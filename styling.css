@@ -4,7 +4,7 @@
 /* Global styles */
 body {
     font-family: 'Georgia', sans-serif;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #cdcdcd; /* Light gray background */
     color: #333;
     margin: 0;
     padding: 0;
@@ -52,12 +52,12 @@ header p {
 
 main 
 {
-    background-color: #f0f0f0; /* Light grey background */
+    background-color: #cdcdcd; /* Light grey background */
 }
 
 footer 
 {
-    background-color: #f0f0f0; /* Light grey background */
+    background-color: #cdcdcd; /* Light grey background */
 }
 
 /* Navigation Style */
@@ -97,7 +97,26 @@ label
 	font-weight: bold;
 	color: #22517c;
 	font-family: 'Helvetica', cursive;
-	margin-left: 40px;
+	margin-left: 70px;
+}
+
+button
+{
+	margin-left: 70px;
+	margin-bottom: 40px;
+	font-family: 'Helvetica', cursive;
+	 background-color: #22517c; /* Background color of the button */
+   	 color: #fff; /* Text color of the button */
+   	 padding: 10px 20px; /* Padding inside the button */
+   	 font-size: 16px; /* Font size of the text inside the button */
+   	 border: none; /* Remove border */
+   	 border-radius: 5px; /* Add a slight border-radius for rounded corners */
+   	 cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover 
+{
+    background-color: #092907; /* Darker background color on hover */
 }
 
 .textbox 
@@ -192,4 +211,3 @@ label
 
 #my-id {
 }
-
