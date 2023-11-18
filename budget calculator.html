@@ -9,20 +9,47 @@
         .goalSelection {
             flex-direction:column
         }
+	
+	#other
+	{
+		display: none;		/* Initial value for extra textfield for other is 'none' */
+	}
     </style>
 </head>
 <body>
     <header>
+    	<div class="header-content">
+        <div class="logo">
+            <img id="logo" src="finance.png" alt="Logo">
+        </div>
+        <div class="header-text">
+            <h1>Financial Planner</h1>
+            <p style ="margin-right: 30px;">Budget Calculator</p>
+        </div>
+    </div>
+	<!-- Navigation section -->
+        <nav>
+          <!-- Menu items -->
+            <ul>
+                <li><a href="mainPage.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <!--<h2>Select your saving goal</h2>
-        <h4>Studies have shown that visualizing your goals makes you more likely to reach them.</h4>-->
+        <!--<h2>Select your saving goal</h2>-->
+	<div class="textbox">
+        	<!-- Text inside the box -->
+        	<p>Studies have shown that visualizing your goals makes you more likely to reach them.</p>
+   	 </div> 
         <!--Ideally, I would like for this to be a dropdown selection where user can add their own after typing Other-->
         <div class="goalSelection"> 
             <h3><em><label for="goalSelection">Select your saving goal: </label></em></h3>
             <br>
-            <select name="goals" id="goals">
+            <select name="goals" id="goals" style="margin-left:70px;" onchange="handleGoalSelection()">
             <option value="new car">New Car</option>
             <option value="mortgage">Mortagage</option>
             <option value="rent">Rent</option>
@@ -32,6 +59,8 @@
             <option value="private loan">Private Loans</option>
             <option value="other">Other</option>
         </select>
+	<!-- Input field for "Other" goals -->
+            <input type="text" id="other" style="margin-left:70px; margin-top:10px;" placeholder="Enter your goal">
         </div>
 
         <!--Based on the selection made above, you will get input boxes 
@@ -39,7 +68,7 @@
             input an estimate of how much you need to save for that goal-->
         <br>
         <div class = "inputs">
-            <h3><em>Inputs: </em></h3>
+            <h3 style="margin-left: 70px;"><em>Inputs: </em></h3>
             <label for="goalAmount">How much do you want to save: </label>
             <input type="number" id="goalAmount" placeholder="Enter goal amount">
             <br>
@@ -67,6 +96,20 @@
 
             <p id="result"></p>
         </div>
+	<!-- Add this script in the head section or before the closing body tag -->
+<script>
+    function handleGoalSelection() {
+        var selectedGoal = document.getElementById("goals").value;
+        var otherGoalField = document.getElementById("other");
+
+        // Show or hide the additional text field based on the selected goal
+        if (selectedGoal === "other") {
+            otherGoalField.style.display = "block";
+        } else {
+            otherGoalField.style.display = "none";
+        }
+    }
+</script>
         <script>
             function firstReport() {
                 // Get user inputs
