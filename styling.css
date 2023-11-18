@@ -60,6 +60,13 @@ footer
     background-color: #cdcdcd; /* Light grey background */
 }
 
+footer p
+{
+	font-size: 16px;
+	font-family: 'Helvetica', cursive;
+	margin-left: 70px;
+}
+
 /* Navigation Style */
 nav {
     font-family: 'Georgia', cursive;
@@ -119,23 +126,46 @@ button:hover
     background-color: #092907; /* Darker background color on hover */
 }
 
-.textbox 
+.textbox {
+    width: 100%;
+    /*max-width: 100%;*/
+    height: auto;
+    background-color: #22517c;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    text-align: center; /* Align the text to the left */
+}
+
+
+footer .textbox 
 {
             width: 100%; /* Set the width to span the webpage */
-            max-width: 100%; /* Make sure it doesn't exceed the webpage width */
+            max-width: 93%; /* Make sure it doesn't exceed the webpage width */
             height: auto; /* Automatically adjust the height to fit the content */
             background-color: #22517c; /* Background color of the box */
 	    font-size: 20px;
             color: #fff; /* Text color inside the box */
-            padding: 10px; /* Padding inside the box */
-            text-align: center; /* Center-align the text inside the box */
+            padding: 5px; /* Padding inside the box */
+	    padding-left: 20px;
+            text-align: left; /* Center-align the text inside the box */
+	    margin-left: 70px;
+	    margin-right: 70px;
+
 }
+
+footer .textbox p
+{
+	margin-bottom: 6px;
+}
+
 .textbox p
 {
     font-size: 18px;
     color: #FFFFFF;
     margin: 10px 0;
 }
+
 
 .dropdown {
     position: relative;
