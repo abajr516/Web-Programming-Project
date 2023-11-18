@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <title>Help | Finance Manager</title>
     <link rel="stylesheet" type="text/css" href="styling.css">
+    <style>
+	#other
+	{
+		display: none;
+	}
+</style>
 </head>
 <body>
     <header>
@@ -29,16 +35,26 @@
         </nav>
 </header>
 <main>   
-	<form action="submit_form.php" method="post">
-		<br><br>
+	<div class="textbox">
+        	<!-- Text inside the box -->
+        	<p>Problem? We'd love to hear your feedback!</p>
+   	 </div>  
+    </main>
+
+    <footer>
+	<br>
+	<p>If you would like to report an issue related to any of our features, or if you have a suggestion to provide for our website, please fill out the fields below and we will reach out to you!</p>
+        <form action="submit_form.php" method="post">
+		<br>
         	<label for="reason">Reason for Contact:</label>
-        	<select id="reason" name="reason">
+        	<select id="reason" name="reason" onchange="handleReasonSelection()">
           	 	 <option value="login_issue">Login Issue</option>
            		 <option value="report_bug">Report Bug</option>
           	 	 <option value="development_suggestions">Development Suggestions</option>
           	 	 <option value="other">Other</option>
        		 </select>
-		<br><br><br><br>
+		<input type="text" id="other" style="margin-left:70px; margin-top:10px;" placeholder="Enter your reason for contact">
+		<br><br>
         	<label for="email">Email:</label>
         	<input type="email" id="email" name="email" required>
 		<br><br>
@@ -50,10 +66,19 @@
 		<br><br><br><br>
 	        <button type="submit">Submit</button>
     	</form>
-    </main>
+	<script>
+    function handleReasonSelection() {
+        var selectedReason = document.getElementById("reason").value;
+        var otherReasonField = document.getElementById("other");
 
-    <footer>
-        
+        // Show or hide the additional text field based on the selected reason.
+        if (selectedReason === "other") {
+            otherReasonField.style.display = "block";
+        } else {
+            otherReasonField.style.display = "none";
+        }
+    }
+</script>
     </footer>
 </body>
 </html>
