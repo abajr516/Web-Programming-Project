@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Budget Calculator by Financial Planner</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styling.css">
     <style>
         .goalSelection {
@@ -90,44 +91,13 @@
                 It will also give you the projected timeline given how much you input that you will save monthly. Both 
                 will create a visual graph of the timeline.You should also be able to print/email this report.-->
             <!--<input type="submit" value="Generate Report">-->
-            <button onclick="firstReport()">Generate</button>
+            <button onclick="injectReport()">Generate</button>
             <br>
             <br>
-
-            <p id="result"></p>
         </div>
-	<!-- Add this script in the head section or before the closing body tag -->
-<script>
-    function handleGoalSelection() {
-        var selectedGoal = document.getElementById("goals").value;
-        var otherGoalField = document.getElementById("other");
+        <div id="report-container"></div>
 
-        // Show or hide the additional text field based on the selected goal
-        if (selectedGoal === "other") {
-            otherGoalField.style.display = "block";
-        } else {
-            otherGoalField.style.display = "none";
-        }
-    }
-</script>
-        <script>
-            function firstReport() {
-                // Get user inputs
-                var goalAmount = parseFloat(document.getElementById("goalAmount").value);
-                var timeframe = parseFloat(document.getElementById("timeframe").value);
-                var startValue = parseFloat(document.getElementById("startValue").value);
-                var monthlySaving = parseFloat(document.getElementById("monthlySaving").value);
-    
-                
-                var savings = (goalAmount - startValue);
-                var chart_50 = savings *.5;
-                var chart_30 = savings *.3;
-                var chart_20 = savings *.2;
-                document.getElementById("result").textContent = "Expected Monthly Input: " + chart_20;
-                
-            }
-        </script>
-
+        
         <!--Based on the inputs, create a JS function that will compute the 50/30/20 amounts-->
 
         
