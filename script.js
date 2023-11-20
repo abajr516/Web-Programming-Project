@@ -26,10 +26,15 @@ function generateReport() {
     reportHTML +="<h3>Scenario A: You meet your goal in the given time constraint: </h3>";
     reportHTML +="<h3>Scenario B: You meet your goal with the amount you expect to contribute:</h3>";
     reportHTML +="<h3>Scenario C: You meet your goal using the 50-30-20 rule:</h3>";
+    reportHTML +='<button onclick="printReport()">Print Report</button>';
     return reportHTML
 }
 
 function injectReport() {
     var reportContainer=document.getElementById("report-container");
     reportContainer.innerHTML = generateReport();
+}
+
+function printReport() {
+    window.print()
 }
