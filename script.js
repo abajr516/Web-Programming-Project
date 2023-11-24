@@ -1,3 +1,4 @@
+import { jsPDF } from "jspdf";
 function handleGoalSelection() {
     var selectedGoal = document.getElementById("goals").value;
     var otherGoalField = document.getElementById("other");
@@ -27,6 +28,7 @@ function generateReport() {
     reportHTML +="<h3>Scenario B: You meet your goal with the amount you expect to contribute:</h3>";
     reportHTML +="<h3>Scenario C: You meet your goal using the 50-30-20 rule:</h3>";
     reportHTML +='<button onclick="printReport()">Print Report</button>';
+    reportHTML +='<button onclick="">Download as PDF</button>';
     return reportHTML
 }
 
@@ -37,4 +39,11 @@ function injectReport() {
 
 function printReport() {
     window.print()
+}
+
+function downloadReport(){
+    const doc = new jsPDF();
+    var content = document.getElementById("report_container");
+    doc.text(content, 10, 10);
+    doc.save("Budget_Report.pdf");
 }
