@@ -1,4 +1,3 @@
-<!--Hello, World!-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +5,6 @@
     <title>Budget Calculator by Financial Planner</title>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
     <link rel="stylesheet" type="text/css" href="styling.css">
     <style>
         .goalSelection {
@@ -84,8 +82,12 @@
             <input type="number" id = "startValue" placeholder="Enter starting amount">
             <br>
             <br>
-            <label for="monthlySaving">Enter amount you plan on saving: </label>
-            <input type="number" id="monthlySaving" placeholder="Enter monthly saving amount">
+            <label for="monthlySaving">Enter minimum amount you plan on saving: </label>
+            <input type="number" id="monthlySaving" placeholder="Enter minimum monthly saving amount">
+            <br>
+            <br>
+            <label for="income">Enter monthly income (after tax): </label>
+            <input type="number" id="income" placeholder="Enter monthly income">
             <br>
             <br>
             <!--Once you click generate report, it's going to use the info you gave to create a report that tells you 
@@ -96,10 +98,8 @@
             <button onclick="injectReport()">Generate</button>
             <br>
             <br>
+            <div id="report-container"></div>
         </div>
-        <div id="report-container"></div>
-
-        
         <!--Based on the inputs, create a JS function that will compute the 50/30/20 amounts-->
 
         
