@@ -1,26 +1,28 @@
 <!--Hello, World!-->
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Finance Manager</title>
     <link rel="stylesheet" type="text/css" href="styling.css">
     <script src="script.js"></script>
 </head>
+
 <body>
     <header>
-    <div class="header-content">
-        <div class="logo">
-            <img id="logo" src="finance.png" alt="Logo">
+        <div class="header-content">
+            <div class="logo">
+                <img id="logo" src="finance.png" alt="Logo">
+            </div>
+            <div class="header-text">
+                <h1>Welcome to Financial Planner</h1>
+                <p style="margin-right: 30px;">Your tool to financial security</p>
+            </div>
         </div>
-        <div class="header-text">
-            <h1>Welcome to Financial Planner</h1>
-            <p style ="margin-right: 30px;">Your tool to financial security</p>
-        </div>
-    </div>
-	<!-- Navigation section -->
+        <!-- Navigation section -->
         <nav>
-          <!-- Menu items -->
+            <!-- Menu items -->
             <ul>
                 <li><a href="mainPage.html">Home</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
@@ -28,21 +30,22 @@
                 <li><a href="help.html">Help</a></li>
             </ul>
         </nav>
-</header>
+    </header>
 
     <main>
-	<div class="textbox">
-        	<!-- Text inside the box -->
-        	<p>Financial tips: </p>
-   	 </div>    
+        <div class="textbox">
+            <!-- Text inside the box -->
+            <p>Financial tips: </p>
+        </div>
         <div id="tipCycle"></div>
         <script>
-        tipCarousel();
-        setInterval(tipCarousel, 7000);</script>   
+            tipCarousel();
+            setInterval(tipCarousel, 7000);</script>
     </main>
 
     <footer>
-	
+
     </footer>
 </body>
+
 </html>
