@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Budget Calculator by Financial Planner</title>
@@ -8,29 +9,30 @@
     <link rel="stylesheet" type="text/css" href="styling.css">
     <style>
         .goalSelection {
-            flex-direction:column
+            flex-direction: column
         }
-	
-	#other
-	{
-		display: none;		/* Initial value for extra textfield for other is 'none' */
-	}
+
+        #other {
+            display: none;
+            /* Initial value for extra textfield for other is 'none' */
+        }
     </style>
 </head>
+
 <body>
     <header>
-    	<div class="header-content">
-        <div class="logo">
-            <img id="logo" src="finance.png" alt="Logo">
+        <div class="header-content">
+            <div class="logo">
+                <img id="logo" src="finance.png" alt="Logo">
+            </div>
+            <div class="header-text">
+                <h1>Financial Planner</h1>
+                <p style="margin-right: 30px;">Budget Calculator</p>
+            </div>
         </div>
-        <div class="header-text">
-            <h1>Financial Planner</h1>
-            <p style ="margin-right: 30px;">Budget Calculator</p>
-        </div>
-    </div>
-	<!-- Navigation section -->
+        <!-- Navigation section -->
         <nav>
-          <!-- Menu items -->
+            <!-- Menu items -->
             <ul>
                 <li><a href="mainPage.html">Home</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
@@ -42,25 +44,25 @@
 
     <main>
         <!--<h2>Select your saving goal</h2>-->
-	<div class="textbox">
-        	<!-- Text inside the box -->
-        	<p>Studies have shown that visualizing your goals makes you more likely to reach them.</p>
-   	 </div> 
+        <div class="textbox">
+            <!-- Text inside the box -->
+            <p>Studies have shown that visualizing your goals makes you more likely to reach them.</p>
+        </div>
         <!--Ideally, I would like for this to be a dropdown selection where user can add their own after typing Other-->
-        <div class="goalSelection"> 
+        <div class="goalSelection">
             <h3><em><label for="goalSelection">Select your saving goal: </label></em></h3>
             <br>
             <select name="goals" id="goals" style="margin-left:70px;" onchange="handleGoalSelection()">
-            <option value="new car">New Car</option>
-            <option value="mortgage">Mortagage</option>
-            <option value="rent">Rent</option>
-            <option value="utlity bills">Utility Bills</option>
-            <option value="retirement">Retirement</option>
-            <option value="student loan">Student Loans</option>
-            <option value="private loan">Private Loans</option>
-            <option value="other">Other</option>
-        </select>
-	<!-- Input field for "Other" goals -->
+                <option value="new car">New Car</option>
+                <option value="mortgage">Mortagage</option>
+                <option value="rent">Rent</option>
+                <option value="utlity bills">Utility Bills</option>
+                <option value="retirement">Retirement</option>
+                <option value="student loan">Student Loans</option>
+                <option value="private loan">Private Loans</option>
+                <option value="other">Other</option>
+            </select>
+            <!-- Input field for "Other" goals -->
             <input type="text" id="other" style="margin-left:70px; margin-top:10px;" placeholder="Enter your goal">
         </div>
 
@@ -68,18 +70,19 @@
             for each of the selections you made where you're expected to
             input an estimate of how much you need to save for that goal-->
         <br>
-        <div class = "inputs">
+        <div class="inputs">
             <h3 style="margin-left: 70px;"><em>Inputs: </em></h3>
             <label for="goalAmount">How much do you want to save: $</label>
             <input type="number" id="goalAmount" placeholder="Enter goal amount" required>
             <br>
             <br>
-            <label for ="timeframe">Enter the time range that you want to save the money by: <input type="number" style="width:30px" id = "timeframe" placeholder="0"></label> months</label>
-            
+            <label for="timeframe">Enter the time range that you want to save the money by: <input type="number"
+                    style="width:30px" id="timeframe" placeholder="0"></label> months</label>
+
             <br>
             <br>
             <label for="startValue">Enter starting value: $</label>
-            <input type="number" id = "startValue" placeholder="Enter starting amount" required>
+            <input type="number" id="startValue" placeholder="Enter starting amount" required>
             <br>
             <br>
             <label for="monthlySaving">Enter minimum amount you plan on saving: $</label>
@@ -102,7 +105,7 @@
 
         </div>
         <!--Based on the inputs, create a JS function that will compute the 50/30/20 amounts-->
-        
+
         <!--
         <div class="phppot-container">
             <h1>Savings in Different Scenarios</h1>
@@ -171,4 +174,5 @@
 
     </footer>
 </body>
+
 </html>

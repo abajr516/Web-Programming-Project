@@ -4,7 +4,8 @@
 /* Global styles */
 body {
     font-family: 'Georgia', sans-serif;
-    background-color: #cdcdcd; /* Light gray background */
+    background-color: #cdcdcd;
+    /* Light gray background */
     color: #333;
     margin: 0;
     padding: 0;
@@ -24,54 +25,60 @@ header h1 {
     font-family: 'Helvetica', cursive;
     font-size: 40px;
     margin-bottom: 20px;
-    color: #22517c; /* Dark blue text color */
+    color: #22517c;
+    /* Dark blue text color */
 }
 
 h1 {
-    font-size: 24px; /* Adjust the font size as needed */
-    margin: 10px 0; /* Remove any default margins */
-    padding: 0; /* Remove any default padding */
+    font-size: 24px;
+    /* Adjust the font size as needed */
+    margin: 10px 0;
+    /* Remove any default margins */
+    padding: 0;
+    /* Remove any default padding */
 }
 
 /* Apply CSS styles to the small elements within the h1 tags */
 h1 small {
-    font-size: 18px; /* Adjust the font size as needed */
+    font-size: 18px;
+    /* Adjust the font size as needed */
 }
 
-p 
-{
+p {
     font-family: 'Helvetica', cursive;
     font-size: 24px;
-    color: #22517c; /* Dark blue text color */
+    color: #22517c;
+    /* Dark blue text color */
 }
 
 header p {
     font-size: 18px;
-    color: #22517c; /* Dark blue text color */
+    color: #22517c;
+    /* Dark blue text color */
 }
 
-main 
-{
-    background-color: #cdcdcd; /* Light grey background */
+main {
+    background-color: #cdcdcd;
+    /* Light grey background */
 }
 
-footer 
-{
-    background-color: #cdcdcd; /* Light grey background */
+footer {
+    background-color: #cdcdcd;
+    /* Light grey background */
 }
 
-footer p
-{
-	font-size: 16px;
-	font-family: 'Helvetica', cursive;
-	margin-left: 70px;
+footer p {
+    font-size: 16px;
+    font-family: 'Helvetica', cursive;
+    margin-left: 70px;
 }
 
 /* Navigation Style */
 nav {
     font-family: 'Georgia', cursive;
     font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    background-color: rgba(0, 0, 0, 0);
+    /* Transparent background */
     text-align: center;
     padding: 10px 0;
 }
@@ -90,40 +97,48 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333; /* Dark gray text color */
+    color: #333;
+    /* Dark gray text color */
 }
 
 nav ul li a:hover {
-    background-color: #22517c; /* Dark blue on hover */
-    color: #fff; /* White text color on hover */
+    background-color: #22517c;
+    /* Dark blue on hover */
+    color: #fff;
+    /* White text color on hover */
 }
 
 /* Styling for label tags */
-label
-{
-	font-weight: bold;
-	color: #22517c;
-	font-family: 'Helvetica', cursive;
-	margin-left: 70px;
+label {
+    font-weight: bold;
+    color: #22517c;
+    font-family: 'Helvetica', cursive;
+    margin-left: 70px;
 }
 
-button
-{
-	margin-left: 70px;
-	margin-bottom: 40px;
-	font-family: 'Helvetica', cursive;
-	 background-color: #22517c; /* Background color of the button */
-   	 color: #fff; /* Text color of the button */
-   	 padding: 10px 20px; /* Padding inside the button */
-   	 font-size: 16px; /* Font size of the text inside the button */
-   	 border: none; /* Remove border */
-   	 border-radius: 5px; /* Add a slight border-radius for rounded corners */
-   	 cursor: pointer; /* Change cursor to pointer on hover */
+button {
+    margin-left: 70px;
+    margin-bottom: 40px;
+    font-family: 'Helvetica', cursive;
+    background-color: #22517c;
+    /* Background color of the button */
+    color: #fff;
+    /* Text color of the button */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    font-size: 16px;
+    /* Font size of the text inside the button */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add a slight border-radius for rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
 }
 
-button:hover 
-{
-    background-color: #092907; /* Darker background color on hover */
+button:hover {
+    background-color: #092907;
+    /* Darker background color on hover */
 }
 
 .textbox {
@@ -134,33 +149,38 @@ button:hover
     font-size: 20px;
     color: #fff;
     padding: 10px;
-    text-align: center; /* Align the text to the left */
+    text-align: center;
+    /* Align the text to the left */
 }
 
 
-footer .textbox 
-{
-            width: 100%; /* Set the width to span the webpage */
-            max-width: 93%; /* Make sure it doesn't exceed the webpage width */
-            height: auto; /* Automatically adjust the height to fit the content */
-            background-color: #22517c; /* Background color of the box */
-	    font-size: 20px;
-            color: #fff; /* Text color inside the box */
-            padding: 5px; /* Padding inside the box */
-	    padding-left: 20px;
-            text-align: left; /* Center-align the text inside the box */
-	    margin-left: 70px;
-	    margin-right: 70px;
+footer .textbox {
+    width: 100%;
+    /* Set the width to span the webpage */
+    max-width: 93%;
+    /* Make sure it doesn't exceed the webpage width */
+    height: auto;
+    /* Automatically adjust the height to fit the content */
+    background-color: #22517c;
+    /* Background color of the box */
+    font-size: 20px;
+    color: #fff;
+    /* Text color inside the box */
+    padding: 5px;
+    /* Padding inside the box */
+    padding-left: 20px;
+    text-align: left;
+    /* Center-align the text inside the box */
+    margin-left: 70px;
+    margin-right: 70px;
 
 }
 
-footer .textbox p
-{
-	margin-bottom: 6px;
+footer .textbox p {
+    margin-bottom: 6px;
 }
 
-.textbox p
-{
+.textbox p {
     font-size: 18px;
     color: #FFFFFF;
     margin: 10px 0;
@@ -181,46 +201,47 @@ footer .textbox p
     text-decoration: none;
 }
 
-.header-content 
-{
+.header-content {
     text-align: center;
     margin-top: 20px;
 }
 
-.header-content h1 
-{
+.header-content h1 {
     font-size: 40px;
     color: #22517c;
     margin-right: 20px;
 }
 
-.header-content div 
-{
+.header-content div {
     font-family: 'Helvetica', cursive;
     font-size: 24px;
     color: #22517c;
 }
 
-.header-text 
-{
+.header-text {
     /* Adjust margin as needed to control the space between the logo and 			  text */
     margin-right: 140px;
-    text-align: center; /* Align text to the left */
-    color: #22517c; /* Dark blue text color */
+    text-align: center;
+    /* Align text to the left */
+    color: #22517c;
+    /* Dark blue text color */
 }
+
 /* Class selectors */
 .menu-item {
     font-family: 'Merriweather', serif;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #22517c; /* Dark blue text color */
+    color: #22517c;
+    /* Dark blue text color */
 }
 
 .menu-item li {
     display: inline;
     margin-right: 20px;
-    background-color: #f0f0f0; /* Light gray background for boxes */
+    background-color: #f0f0f0;
+    /* Light gray background for boxes */
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -232,21 +253,20 @@ footer .textbox p
 /* ID selectors */
 
 /* Apply CSS styles to the logo */
-#logo 
-{
-     max-width: 150px;
-     float: left; /* This will make the logo appear on the left */
-     margin-left: 50px;
+#logo {
+    max-width: 150px;
+    float: left;
+    /* This will make the logo appear on the left */
+    margin-left: 50px;
 }
 
-#my-id {
-}
+#my-id {}
 
 #tipCycle {
     text-align: center;
     margin: 50px;
     padding: 50px;
-    border-style:inset;
+    border-style: inset;
     border-color: rgb(16, 36, 55);
     background-color: #f7f6f6;
     font-size: x-large;
