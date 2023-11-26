@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Finance Manager</title>
     <link rel="stylesheet" type="text/css" href="styling.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -33,11 +34,15 @@
 	<div class="textbox">
         	<!-- Text inside the box -->
         	<p>Financial tips: </p>
-   	 </div>       
+   	 </div>    
+        <div id="tipCycle"></div>
+        <script>
+        tipCarousel();
+        setInterval(tipCarousel, 15000);</script>   
     </main>
 
     <footer>
-	<p> test </p>
+	
     </footer>
 </body>
 </html>

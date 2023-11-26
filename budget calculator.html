@@ -70,24 +70,24 @@
         <br>
         <div class = "inputs">
             <h3 style="margin-left: 70px;"><em>Inputs: </em></h3>
-            <label for="goalAmount">How much do you want to save: </label>
-            <input type="number" id="goalAmount" placeholder="Enter goal amount">
+            <label for="goalAmount">How much do you want to save: $</label>
+            <input type="number" id="goalAmount" placeholder="Enter goal amount" required>
             <br>
             <br>
-            <label for ="timeframe">Enter the time range that you want to save the money by: </label>
-            <input type="number" id = "timeframe" placeholder="Enter time range"></label>
+            <label for ="timeframe">Enter the time range that you want to save the money by: <input type="number" style="width:30px" id = "timeframe" placeholder="0"></label> months</label>
+            
             <br>
             <br>
-            <label for="startValue">Enter starting value: </label>
-            <input type="number" id = "startValue" placeholder="Enter starting amount">
+            <label for="startValue">Enter starting value: $</label>
+            <input type="number" id = "startValue" placeholder="Enter starting amount" required>
             <br>
             <br>
-            <label for="monthlySaving">Enter minimum amount you plan on saving: </label>
-            <input type="number" id="monthlySaving" placeholder="Enter minimum monthly saving amount">
+            <label for="monthlySaving">Enter minimum amount you plan on saving: $</label>
+            <input type="number" id="monthlySaving" placeholder="Enter minimum monthly saving amount" required>
             <br>
             <br>
-            <label for="income">Enter monthly income (after tax): </label>
-            <input type="number" id="income" placeholder="Enter monthly income">
+            <label for="income">Enter monthly income (after tax): $</label>
+            <input type="number" id="income" placeholder="Enter monthly income" required>
             <br>
             <br>
             <!--Once you click generate report, it's going to use the info you gave to create a report that tells you 
@@ -99,10 +99,73 @@
             <br>
             <br>
             <div id="report-container"></div>
+
         </div>
         <!--Based on the inputs, create a JS function that will compute the 50/30/20 amounts-->
-
         
+        <!--
+        <div class="phppot-container">
+            <h1>Savings in Different Scenarios</h1>
+            <div>
+                <canvas id="line-chart"></canvas>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+        <script>
+            var lst = []
+            for (i= 0; i<=50; i+=5){
+                lst.push(i)
+            }
+            var dataA = []
+            for (i=100; i<=1100; i+=50){
+                dataA.push(i)
+            }
+            document.write(dataA);
+            var dataB = []
+            for (i=100; i<=1100; i+=10){
+                dataB.push(i)
+            }
+            document.write(dataB);
+            var dataC = []
+            for (i=100; i<=1100; i+=160){
+                dataC.push(i)
+            }
+            document.write(dataC);
+            new Chart(document.getElementById("line-chart"), {
+                type : 'line',
+                data : {
+                    labels : lst,
+                    datasets : [
+                            {
+                                data : dataA,
+                                label : "Scenario A",
+                                borderColor : "#3cba9f",
+                                fill : false
+                            },
+                            {
+                                data : dataB,
+                                label : "Scenario B",
+                                borderColor : "#e43202",
+                                fill : false
+                            },
+                            {
+                                data : dataC,
+                                label : "Scenario C",
+                                borderColor : "#e43202",
+                                fill : false
+                            } 
+                        ]
+                },
+                options : {
+                    title : {
+                        display : true,
+                        text : 'Chart JS Multiple Lines Example'
+                    }
+                }
+            });
+        </script>
+        -->
     </main>
     <footer>
 

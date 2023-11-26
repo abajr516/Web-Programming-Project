@@ -18,13 +18,18 @@ function generateReport() {
     var startValue = parseFloat(document.getElementById("startValue").value);
     var predictedMonthlySaving = parseFloat(document.getElementById("monthlySaving").value);
     var monthlyIncome = parseFloat(document.getElementById("income").value);
+    // Validate that the required inputs have been entered
+    if (isNaN(goalAmount) || isNaN(timeframe) || isNaN(startValue) || isNaN(predictedMonthlySaving) || isNaN(monthlyIncome)) {
+        return "<p>Enter valid inputs to generate report...</p>"
+    }
+    // Calculate savings for different scenarios
     var savings = (goalAmount - startValue);
-    var idealMonthlySaving = savings/timeframe;
-    var updatedTimeframe = savings/timeframe;
-    var chart_50 = monthlyIncome *.5;
-    var chart_30 = monthlyIncome *.3;
-    var chart_20 = monthlyIncome *.2;
-    var updatedTimeframe2 = Math.ceil(savings/chart_20);
+    var idealMonthlySaving = savings/timeframe; //Scenario A
+    var updatedTimeframe = savings/timeframe; //Scenario B
+    var chart_50 = monthlyIncome *.5; //Scenario C
+    var chart_30 = monthlyIncome *.3; //Scenario C
+    var chart_20 = monthlyIncome *.2; //Scenario C
+    var updatedTimeframe2 = Math.ceil(savings/chart_20); //Scenario C
 
     //Start creating report
     var reportHTML = "<h2>Your Budget Report:</h2>";
@@ -45,7 +50,7 @@ function generateReport() {
     reportHTML += "<p>If you follow the 50-30-20 plan, your updated timeframe will change.</p>";
     reportHTML += "<p>Updated timeframe: "+updatedTimeframe2+" months</p>";
     reportHTML +='<button onclick="printReport()">Print</button>';
-    return reportHTML;
+    return reportHTML; //to be injected into empty container
 }
 
 function injectReport() {
@@ -54,11 +59,23 @@ function injectReport() {
     reportContainer.innerHTML = reportHTML;
 }
 
+function createGraph() {
+
+}
 
 function printReport() {
     window.print()
 }
 
+function findLargest(a, b, c) {
+    if (a >= b && a >= c) {
+      return a;
+    } else if (b >= a && b >= c) {
+      return b;
+    } else {
+      return c;
+    }
+  }
 /*function downloadReport(){
     const doc = new jsPDF();
     var reportContainer=document.getElementById("report-container");
@@ -66,3 +83,15 @@ function printReport() {
     doc.text(content, 10, 10);
     doc.save("Budget_Report.pdf");
 }*/
+var tips = 
+["Differentiate between needs and wants when making purchasing decisions.",
+ "Define short-term and long-term financial goals.", 
+ "Regularly review your financial situation and adjust your plan as needed.", 
+ "Set up automatic transfers to your savings account to ensure consistent saving.", 
+ "Diversify income sources to reduce financial vulnerability.", 
+ "As your income increases, resist the temptation to inflate your lifestyle."];
+index = 0;
+function tipCarousel() {
+    document.getElementById("tipCycle").textContent = tips[index];
+    index = (index + 1) % tips.length;;
+}
