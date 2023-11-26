@@ -241,3 +241,14 @@ footer .textbox p
 
 #my-id {
 }
+
+#tipCycle {
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+    border-style:inset;
+    border-color: rgb(16, 36, 55);
+    background-color: #f7f6f6;
+    font-size: x-large;
+    border-width: 10px;
+}
