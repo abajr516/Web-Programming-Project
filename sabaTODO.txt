@@ -1,11 +1,4 @@
-About Us: A little about the goal of the website and a little bit about the collaborators.
-    Information about us
-    Information about website.
-        Goal/Purpose of website.
-
-Services: 
-    Budget Calculator.
-    Financial outlook.
-        Net Income Calculator.
+About Us: little bit about the collaborators.
+    Information about us.
 
 COMPLETE TECHNOLOGIES USED IN GOOGLE DOC.
