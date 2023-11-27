@@ -93,7 +93,7 @@ var tips =
 index = 0;
 function tipCarousel() {
     document.getElementById("tipCycle").textContent = tips[index];
-    index = (index + 1) % tips.length;;
+    index = (index + 1) % tips.length;
 }
 
 function addCashIn() {
