@@ -7,6 +7,14 @@
     <title>Finance Manager</title>
     <link rel="stylesheet" type="text/css" href="styling.css">
     <script src="script.js"></script>
+    <style>
+	footer img
+	{
+		margin-left: 465px; /* Adjust the margin as needed */
+            border: 1px solid #ccc; /* Optional border for styling */
+            border-radius: 5px; /* Optional border-radius for styling */
+	}
+    </style>
 </head>
 
 <body>
@@ -35,16 +43,16 @@
     <main>
         <div class="textbox">
             <!-- Text inside the box -->
-            <p>Financial tips: </p>
-        </div>
-        <div id="tipCycle"></div>
-        <script>
+            <p>Financial tips: <div id="tipCycle"></div><script>
             tipCarousel();
-            setInterval(tipCarousel, 4000);</script>
+            setInterval(tipCarousel, 4000);</script> </p>
+        </div>
+      
     </main>
 
     <footer>
-
+	   <p style="margin: 15px; margin-left: 25px; font-style: 'Helvetica', cursive; font-weight: bold;">In today's dynamic and complex financial market, having a dedicated financial planning website is critical for individuals trying to safeguard their financial future and make informed financial decisions. Our personalized financial planning website acts as a comprehensive and easily accessible hub, providing users with the tools and resources they need to navigate the complexities of personal finance. This platform provides users with a clear knowledge of their present financial status through interactive features and skillfully curated material, allowing them to set realistic goals and construct a bespoke path for financial success.</p>
+	   <img src="homePagePicture1.jpg" alt="Picture of financial advisor with clients" width="600" height="400">
     </footer>
 </body>
 
