@@ -2,11 +2,10 @@ About Us: A little about the goal of the website and a little bit about the coll
     Information about us
     Information about website.
         Goal/Purpose of website.
+
 Services: 
     Budget Calculator.
     Financial outlook.
         Net Income Calculator.
-
-GET TIPS INSIDE THE BLUE BOX.
 
 COMPLETE TECHNOLOGIES USED IN GOOGLE DOC.
