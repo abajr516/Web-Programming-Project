@@ -73,7 +73,8 @@ function generateReport() {
     });*/
 
     //Start creating report
-    var reportHTML = "<h2>Your Budget Report:</h2>";
+    var reportHTML = "<br><br><br><br><br><br><br><br><br>";
+    reportHTML += "<h2>Your Budget Report:</h2>";
     reportHTML += "<h4>Saving for " + selectedValue + "? Here is your report.</h4>";
     reportHTML += "<h3>Scenario A: You meet your goal in the given time constraint: </h3>";
     reportHTML += "<p>Timeframe: " + timeframe + " months</p>";
