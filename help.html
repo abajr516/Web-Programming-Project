@@ -11,6 +11,7 @@
             display: none;
         }
     </style>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
         <br>
         <p>If you would like to report an issue related to any of our features, or if you have a suggestion to provide
             for our website, please fill out the fields below and we will reach out to you!</p>
-        <form action="submit_form.php" method="post">
+        <form>
             <br>
             <label for="reason">Reason for Contact:</label>
             <select id="reason" name="reason" onchange="handleReasonSelection()">
@@ -67,7 +68,8 @@
             <label for="description">Description:</label>
             <textarea id="description" name="description" rows="4" required></textarea>
             <br><br><br><br>
-            <button type="submit">Submit</button>
+            <!--Only simulates sending a request, doesn't actually do it-->
+            <button type="submit" onclick="send()">Submit</button>
         </form>
         <script>
             function handleReasonSelection() {

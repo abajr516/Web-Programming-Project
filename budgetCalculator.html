@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
     <title>Budget Calculator by Financial Planner</title>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -50,16 +49,16 @@
         </div>
         <!--Ideally, I would like for this to be a dropdown selection where user can add their own after typing Other-->
         <div class="goalSelection">
-            <h3><em><label for="goalSelection">Select your saving goal: </label></em></h3>
+            <h3><em><label for="goals">Select your saving goal: </label></em></h3>
             <br>
             <select name="goals" id="goals" style="margin-left:70px;" onchange="handleGoalSelection()">
-                <option value="new car">New Car</option>
-                <option value="mortgage">Mortagage</option>
-                <option value="rent">Rent</option>
-                <option value="utlity bills">Utility Bills</option>
-                <option value="retirement">Retirement</option>
-                <option value="student loan">Student Loans</option>
-                <option value="private loan">Private Loans</option>
+                <option value="your new car">New Car</option>
+                <option value="your mortgage">Mortagage</option>
+                <option value="your rent">Rent</option>
+                <option value="your utlity bills">Utility Bills</option>
+                <option value="your retirement">Retirement</option>
+                <option value="your student loan">Student Loans</option>
+                <option value="your private loan">Private Loans</option>
                 <option value="other">Other</option>
             </select>
             <!-- Input field for "Other" goals -->

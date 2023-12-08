@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cash Flow by Financial Planner</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styling.css">
 </head>
@@ -41,34 +42,38 @@
             <br>
             <div id="cashFlowIn">
                 <h2 style="margin-left: 70px;">Cash In</h2>
-                <label for="start">Starting Balance: $</label>
-                <input type="number" id="start" placeholder="Enter starting balance" required>
+                <label for="inputs">Starting Balance: $</label>
+                <input type="number" class="inputs" placeholder="Enter starting balance" required>
                 <br>
                 <br>
-                <label for="income">Income: $</label>
-                <input type="number" id="income" placeholder="Enter monthly income" required>
+                <label for="inputs">Income: $</label>
+                <input type="number" class="inputs" placeholder="Enter monthly income" required>
                 <br>
                 <br>
             </div>
             <br>
             <br>
             <button onclick="addCashIn()">+</button>&emsp;Additional Cash Flow In
+            <br>
             <div id="cashFlowOut">
                 <h2 style="margin-left: 70px;">Cash Out</h2>
-                <label for="housing">Rent/Mortgage: $</label>
-                <input type="number" id="housing" placeholder="Enter rent/mortgage" required>
+                <label for="outputs">Rent/Mortgage: $</label>
+                <input type="number" class="outputs" placeholder="Enter rent/mortgage" required>
                 <br>
                 <br>
-                <label for="netIncome">Net Income: $</label>
-                <input type="number" id="netIncome" placeholder="Enter net income" required>
+                <label for="outputs">Net Income: $</label>
+                <input type="number" class="outputs" placeholder="Enter net income" required>
                 <br>
                 <br>
             </div>
             <br>
-            <br>
-            <button onclick="addCashOut()">+</button>&emsp;Additional Cash Flow Out
 
+            <button onclick="addCashOut()">+</button>&emsp;Additional Cash Flow Out
+            <br>
+            <button onclick="createGraph()">Determine Cashflow</button>
         </div>
+        <canvas id="myBarChart"></canvas>
+
     </main>
     <footer>
 

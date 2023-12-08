@@ -273,8 +273,6 @@ footer .textbox p {
     margin-left: 50px;
 }
 
-#my-id {}
-
 #tipCycle {
     text-align: center;
     padding: 10px;
@@ -284,3 +282,25 @@ footer .textbox p {
     font-size: large;
     border-width: 10px;
 }
+
+#report-container{
+    margin:60px;
+    padding:10px;
+    color: #22517c;
+}
+
+#report-container h3 {
+    color:black;
+}
+
+#report-container p {
+    font-size:medium;
+}
+
+#myBarChart {
+    margin: 70px;
+    width: 50% !important;
+    height: auto !important;
+    background-color: white;
+}
+

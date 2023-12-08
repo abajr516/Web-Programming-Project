@@ -1,4 +1,3 @@
-/*import { jsPDF } from 'jspdf';*/
 function handleGoalSelection() {
     var selectedGoal = document.getElementById("goals").value;
     var otherGoalField = document.getElementById("other");
@@ -13,6 +12,9 @@ function handleGoalSelection() {
 
 function generateReport() {
     // Get user inputs
+    var selectElement = document.getElementById("goals");
+    var selectedOption = selectElement.options[selectElement.selectedIndex];
+    var selectedValue = selectedOption.value;
     var goalAmount = parseFloat(document.getElementById("goalAmount").value);
     var timeframe = parseFloat(document.getElementById("timeframe").value);
     var startValue = parseFloat(document.getElementById("startValue").value);
@@ -33,7 +35,7 @@ function generateReport() {
 
     //Start creating report
     var reportHTML = "<h2>Your Budget Report:</h2>";
-    reportHTML += "<h4>Saving for _____? Here is your report.</h4>";
+    reportHTML += "<h4>Saving for "+selectedValue+"? Here is your report.</h4>";
     reportHTML += "<h3>Scenario A: You meet your goal in the given time constraint: </h3>";
     reportHTML += "<p>Timeframe: " + timeframe + " months</p>";
     reportHTML += "<p>Ideal Monthly Saving: $" + idealMonthlySaving.toFixed(2) + "</p>";
@@ -99,12 +101,12 @@ function tipCarousel() {
 function addCashIn() {
     //Create label
     var labelElement = document.createElement("label");
-    labelElement.htmlFor = "cashIn";
+    labelElement.htmlFor = "inputs";
     labelElement.textContent = "Additional Income: $";
     //Create input box
     var inputElement = document.createElement("input");
     inputElement.type = "number";
-    inputElement.id = "cashIn";
+    inputElement.class = "inputs";
     inputElement.placeholder = "Enter additional income";
     inputElement.required;
     var containerDiv = document.createElement("div");
@@ -118,12 +120,12 @@ function addCashIn() {
 function addCashOut() {
     //Create label
     var labelElement = document.createElement("label");
-    labelElement.htmlFor = "cashOut";
+    labelElement.htmlFor = "outputs";
     labelElement.textContent = "Additional Expense: $";
     //Create input box
     var inputElement = document.createElement("input");
     inputElement.type = "number";
-    inputElement.id = "cashOut";
+    inputElement.class = "outputs";
     inputElement.placeholder = "Enter additional expense";
     inputElement.required;
     var containerDiv = document.createElement("div");
@@ -132,4 +134,92 @@ function addCashOut() {
     containerDiv.appendChild(labelElement);
     containerDiv.appendChild(inputElement);
     document.getElementById("cashFlowOut").appendChild(containerDiv);
+}
+
+var initialInputElements=document.getElementsByClassName("inputs");
+var initialOutputElements = document.getElementsByClassName("outputs");
+
+function createGraph() {
+    // Calculate input sum
+    var inputElements = document.getElementsByClassName("inputs");
+    var inputSum = 0;
+    for (var i = 0; i < inputElements.length; i++) {
+        var inputValue = parseFloat(inputElements[i].value);
+        if (!isNaN(inputValue)) {
+            inputSum+=inputValue;
+        }
+    }
+    for (var i = 0; i < initialInputElements.length; i++) {
+        var inputValue = parseFloat(initialInputElements[i].value);
+        if (!isNaN(inputValue)) {
+            inputSum+=inputValue;
+        }
+    }
+    // Calculate output sum
+    var outputElements = document.getElementsByClassName("outputs");
+    var outputSum = 0;
+    for (var i = 0; i < outputElements.length; i++) {
+        var outputValue = parseFloat(outputElements[i].value);
+        if (!isNaN(outputValue)) {
+            outputSum+=outputValue;
+        }
+    }
+    for (var i = 0; i < initialOutputElements.length; i++) {
+        var outputValue = parseFloat(initialOutputElements[i].value);
+        if (!isNaN(outputValue)) {
+            outputSum+=outputValue;
+        }
+    }
+    console.log(inputSum)
+    console.log(outputSum)
+    // Sample data
+    var labels = ['Cashflow'];
+    var data = [inputSum, (-outputSum), (inputSum-outputSum)];
+
+    // Get the canvas element
+    var ctx = document.getElementById('myBarChart').getContext('2d');
+
+    // Create a bar chart
+    var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Cash In',
+                data: [data[0]],
+                backgroundColor: 'rgba(55, 124, 34, 0.2)', // Green background color
+                borderColor: 'rgba(55, 124, 34, 1)', // Green border color
+                borderWidth: 1 // Border width
+            },
+            {
+                label: 'Cash Out',
+                data: [data[1]],
+                backgroundColor: 'rgba(124, 34, 34, 0.2)', // Red background color
+                borderColor: 'rgba(124, 34, 34, 1)',
+                borderWidth: 1 // Border width
+            },
+            {
+                label: 'Net Flow',
+                data: [data[2]],
+                backgroundColor: 'rgba(34, 81, 124, 0.2)', // Blue background color
+                borderColor: 'rgba(34, 81, 124, 1)', // Blue border color
+                borderWidth: 1 // Border width
+            },]
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }
+                ]
+            }
+        }
+    });
+}
+
+function send() {
+    alert("Request Sent!");
 }
