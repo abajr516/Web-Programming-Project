@@ -3,8 +3,8 @@
 
 <head>
     <title>Budget Calculator by Financial Planner</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styling.css">
     <style>
         .goalSelection {
@@ -51,7 +51,7 @@
         <div class="goalSelection">
             <h3><em><label for="goals">Select your saving goal: </label></em></h3>
             <br>
-            <select name="goals" id="goals" style="margin-left:70px;" onchange="handleGoalSelection()">
+            <select name="goals" id="goals" style="margin-left:70px;">
                 <option value="your new car">New Car</option>
                 <option value="your mortgage">Mortagage</option>
                 <option value="your rent">Rent</option>
@@ -101,73 +101,10 @@
             <br>
             <br>
             <div id="report-container"></div>
-
+            <canvas id="line-chart"></canvas>
         </div>
         <!--Based on the inputs, create a JS function that will compute the 50/30/20 amounts-->
-
-        <!--
-        <div class="phppot-container">
-            <h1>Savings in Different Scenarios</h1>
-            <div>
-                <canvas id="line-chart"></canvas>
-            </div>
-        </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
-        <script>
-            var lst = []
-            for (i= 0; i<=50; i+=5){
-                lst.push(i)
-            }
-            var dataA = []
-            for (i=100; i<=1100; i+=50){
-                dataA.push(i)
-            }
-            document.write(dataA);
-            var dataB = []
-            for (i=100; i<=1100; i+=10){
-                dataB.push(i)
-            }
-            document.write(dataB);
-            var dataC = []
-            for (i=100; i<=1100; i+=160){
-                dataC.push(i)
-            }
-            document.write(dataC);
-            new Chart(document.getElementById("line-chart"), {
-                type : 'line',
-                data : {
-                    labels : lst,
-                    datasets : [
-                            {
-                                data : dataA,
-                                label : "Scenario A",
-                                borderColor : "#3cba9f",
-                                fill : false
-                            },
-                            {
-                                data : dataB,
-                                label : "Scenario B",
-                                borderColor : "#e43202",
-                                fill : false
-                            },
-                            {
-                                data : dataC,
-                                label : "Scenario C",
-                                borderColor : "#e43202",
-                                fill : false
-                            } 
-                        ]
-                },
-                options : {
-                    title : {
-                        display : true,
-                        text : 'Chart JS Multiple Lines Example'
-                    }
-                }
-            });
-        </script>
-        -->
+        
     </main>
     <footer>
 

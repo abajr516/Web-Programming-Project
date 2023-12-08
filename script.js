@@ -1,14 +1,3 @@
-function handleGoalSelection() {
-    var selectedGoal = document.getElementById("goals").value;
-    var otherGoalField = document.getElementById("other");
-
-    // Show or hide the additional text field based on the selected goal
-    if (selectedGoal === "other") {
-        otherGoalField.style.display = "block";
-    } else {
-        otherGoalField.style.display = "none";
-    }
-}
 
 function generateReport() {
     // Get user inputs
@@ -32,14 +21,64 @@ function generateReport() {
     var chart_30 = monthlyIncome * .3; //Scenario C
     var chart_20 = monthlyIncome * .2; //Scenario C
     var updatedTimeframe2 = Math.ceil(savings / chart_20); //Scenario C
+    /*
+    // Creating graph
+    var dataA = []
+    for (i= startValue; i<=goalAmount; i+=idealMonthlySaving.toFixed(2)){
+        dataA.push(i)
+    }
+    console.log(dataA);
+    var dataB = []
+    for (i=startValue; i<=goalAmount; i+=predictedMonthlySaving.toFixed(2)){
+        dataB.push(i)
+    }
+    console.log(dataB);
+    var dataC = []
+    for (i=startValue; i<=goalAmount; i+=chart_20.toFixed(2)){
+        dataC.push(i)
+    }
+    console.log(dataC);
+    var labels = ['Scenario A', 'Scenario B', 'Scenario C'];
+    new Chart(document.getElementById("line-chart"), {
+        type : 'line',
+        data : {
+            labels : labels,
+            datasets : [
+                    {
+                        data : dataA,
+                        label : "Scenario A",
+                        borderColor : "#3cba9f",
+                        fill : false
+                    },
+                    {
+                        data : dataB,
+                        label : "Scenario B",
+                        borderColor : "#e43202",
+                        fill : false
+                    },
+                    {
+                        data : dataC,
+                        label : "Scenario C",
+                        borderColor : "#e43202",
+                        fill : false
+                    } 
+                ]
+        },
+        options : {
+            title : {
+                display : true,
+                text : 'Chart JS Multiple Lines Example'
+            }
+        }
+    });*/
 
     //Start creating report
     var reportHTML = "<h2>Your Budget Report:</h2>";
-    reportHTML += "<h4>Saving for "+selectedValue+"? Here is your report.</h4>";
+    reportHTML += "<h4>Saving for " + selectedValue + "? Here is your report.</h4>";
     reportHTML += "<h3>Scenario A: You meet your goal in the given time constraint: </h3>";
     reportHTML += "<p>Timeframe: " + timeframe + " months</p>";
     reportHTML += "<p>Ideal Monthly Saving: $" + idealMonthlySaving.toFixed(2) + "</p>";
-    reportHTML += "<h3>Scenario B: You meet your goal with the amount you expect to contribute:</h3>";
+    reportHTML += "<h3>Scenario B: You meet your goal with the minimum amount you expect to contribute:</h3>";
     reportHTML += "<p>In this scenario, we will ignore the timeframe you want to save money by.</p>";
     reportHTML += "<p>Minimum monthly saving: $" + predictedMonthlySaving.toFixed(2) + "</p>";
     reportHTML += "<p>Updated timeframe: " + updatedTimeframe + " months</p>";
@@ -59,10 +98,6 @@ function injectReport() {
     var reportHTML = generateReport()
     var reportContainer = document.getElementById("report-container");
     reportContainer.innerHTML = reportHTML;
-}
-
-function createGraph() {
-
 }
 
 function printReport() {
@@ -143,14 +178,14 @@ function createGraph() {
     for (var i = 0; i < inputElements.length; i++) {
         var inputValue = parseFloat(inputElements[i].value);
         if (!isNaN(inputValue)) {
-            inputSum+=inputValue;
+            inputSum += inputValue;
         }
     }
-    var dynamicInputElements=document.getElementsByClassName("dynamicInputs");
+    var dynamicInputElements = document.getElementsByClassName("dynamicInputs");
     for (var i = 0; i < dynamicInputElements.length; i++) {
         var inputValue = parseFloat(dynamicInputElements[i].value);
         if (!isNaN(inputValue)) {
-            inputSum+=inputValue;
+            inputSum += inputValue;
         }
     }
     // Calculate output sum
@@ -159,21 +194,19 @@ function createGraph() {
     for (var i = 0; i < outputElements.length; i++) {
         var outputValue = parseFloat(outputElements[i].value);
         if (!isNaN(outputValue)) {
-            outputSum+=outputValue;
+            outputSum += outputValue;
         }
     }
-    var dynamicOutputElements=document.getElementsByClassName("dynamicOutputs");
+    var dynamicOutputElements = document.getElementsByClassName("dynamicOutputs");
     for (var i = 0; i < dynamicOutputElements.length; i++) {
         var outputValue = parseFloat(dynamicOutputElements[i].value);
         if (!isNaN(outputValue)) {
-            outputSum+=outputValue;
+            outputSum += outputValue;
         }
     }
-    console.log(inputSum)
-    console.log(outputSum)
     // Sample data
     var labels = ['Cashflow'];
-    var data = [inputSum, (-outputSum), (inputSum-outputSum)];
+    var data = [inputSum, (-outputSum), (inputSum - outputSum)];
 
     // Get the canvas element
     var ctx = document.getElementById('myBarChart').getContext('2d');
