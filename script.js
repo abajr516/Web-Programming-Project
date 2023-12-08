@@ -101,12 +101,12 @@ function tipCarousel() {
 function addCashIn() {
     //Create label
     var labelElement = document.createElement("label");
-    labelElement.htmlFor = "inputs";
+    labelElement.htmlFor = "dynamicInputs";
     labelElement.textContent = "Additional Income: $";
     //Create input box
     var inputElement = document.createElement("input");
     inputElement.type = "number";
-    inputElement.class = "inputs";
+    inputElement.className = "dynamicInputs";
     inputElement.placeholder = "Enter additional income";
     inputElement.required;
     var containerDiv = document.createElement("div");
@@ -120,12 +120,12 @@ function addCashIn() {
 function addCashOut() {
     //Create label
     var labelElement = document.createElement("label");
-    labelElement.htmlFor = "outputs";
+    labelElement.htmlFor = "dynamicOutputs";
     labelElement.textContent = "Additional Expense: $";
     //Create input box
     var inputElement = document.createElement("input");
     inputElement.type = "number";
-    inputElement.class = "outputs";
+    inputElement.className = "dynamicOutputs";
     inputElement.placeholder = "Enter additional expense";
     inputElement.required;
     var containerDiv = document.createElement("div");
@@ -135,9 +135,6 @@ function addCashOut() {
     containerDiv.appendChild(inputElement);
     document.getElementById("cashFlowOut").appendChild(containerDiv);
 }
-
-var initialInputElements=document.getElementsByClassName("inputs");
-var initialOutputElements = document.getElementsByClassName("outputs");
 
 function createGraph() {
     // Calculate input sum
@@ -149,8 +146,9 @@ function createGraph() {
             inputSum+=inputValue;
         }
     }
-    for (var i = 0; i < initialInputElements.length; i++) {
-        var inputValue = parseFloat(initialInputElements[i].value);
+    var dynamicInputElements=document.getElementsByClassName("dynamicInputs");
+    for (var i = 0; i < dynamicInputElements.length; i++) {
+        var inputValue = parseFloat(dynamicInputElements[i].value);
         if (!isNaN(inputValue)) {
             inputSum+=inputValue;
         }
@@ -164,8 +162,9 @@ function createGraph() {
             outputSum+=outputValue;
         }
     }
-    for (var i = 0; i < initialOutputElements.length; i++) {
-        var outputValue = parseFloat(initialOutputElements[i].value);
+    var dynamicOutputElements=document.getElementsByClassName("dynamicOutputs");
+    for (var i = 0; i < dynamicOutputElements.length; i++) {
+        var outputValue = parseFloat(dynamicOutputElements[i].value);
         if (!isNaN(outputValue)) {
             outputSum+=outputValue;
         }
